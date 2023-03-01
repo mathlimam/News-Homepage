@@ -19,27 +19,57 @@
 
 
 body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-left:8.5em;
     padding-right:8.5em;
     padding-top:2em;
     background-color: var(--Off_white);
     font-family: "Inter", sans-serif;
     width: 100vw;
+    min-width:1440px;
     height: 100vh;
+}
+
+main{
+    max-width: 1165px;
+
+    width: 1440px;
 }
 
 header{
     display: flex;
-    height: 60px;
-    margin:15px 0;
+    flex-direction: column-reverse;
+    max-width: 1180px;
+    min-width: 1180px;
+    max-height: 100px;
+    height: 100px;
+    margin-right: -50px;
+    margin-bottom: 50px;
+    
+}
+
+.logo{
+
+    position: absolute;
+    width: min-content;
+    top:75px;
+}
+
+header > ul{
+    display: flex;
+    justify-content: flex-end;
 }
 
 ul{
-    position: relative;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
     list-style-type: none;
-    bottom:160%;
-    left:135%;
+
 }
 
 li{
@@ -72,6 +102,7 @@ nav{
     color: white;
     font-weight: 700;
     letter-spacing: 0.2em;
+    cursor: pointer;
 }
 
 .readmore:hover{
@@ -79,7 +110,7 @@ nav{
 }
 
 .card_banner{
-    border:40px solid var(--Very_dark_blue);
+    border:25px solid var(--Very_dark_blue);
     display:grid;
     grid-template-columns: auto;
     grid-template-rows: 100px 120px 140px 140px;
@@ -158,6 +189,7 @@ p{
 
 .description_header{
     grid-area: description_header;
+    padding-left: 50px;
 }
 
 .card_header{
@@ -166,7 +198,7 @@ p{
 
 .main_container{
     display: grid;
-    grid-template-columns: 320px 380px 400px;
+    grid-template-columns: 320px 410px 370px;
     grid-template-rows: auto 225px;
     grid-template-areas: 
     "img_header img_header  card_header"
@@ -176,26 +208,27 @@ p{
 
 .other1{
     grid-area: other1;
-    background-color: aquamarine;
+
+
 
 }
 .other2{
     grid-area: other2;
-    background-color: aquamarine
+
 }
 .other3{
     grid-area: other3;
-    background-color: aquamarine
+
 }
 
 .other_news{
     margin-top: 20px;
     display:grid;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 370px 370px 370px;
     grid-template-rows: 150px;
     grid-template-areas: 
     "other1 other2 other3";
-    gap:57px;
+    gap:27px;
 }
 
 
@@ -221,4 +254,48 @@ p{
     width: 100%;
     height: 100%;
     background-color: var(--Very_dark_blue);
+}
+
+.img1{
+    grid-area: img1;
+
+}
+
+.notice1{
+    grid-area:notice1;
+
+    padding-left: 20px;;
+}
+
+.cont{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 28% 72%;
+    grid-template-rows: 100%;
+    grid-template-areas: "img1 notice1";
+    cursor:pointer;
+}
+
+.number{
+    font-weight: 600 ;
+    font-size: 2em;
+    color:var(--Grayish_blue)
+}
+
+.subt{
+    font-weight: 600;
+    margin-top: 10px;;
+    margin-bottom: 10px;
+}
+
+.subdesc{
+    color: var(--Dark_grayish_blue);
+    line-height: 1.5em;
+    font-size:0.95em;
+    padding-right: 15px;
+}
+
+.subt:hover{
+    color:var(--Soft_red);
 }
